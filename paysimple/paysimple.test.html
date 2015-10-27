@@ -1,0 +1,82 @@
+<html>
+<body>
+<h1>PaySimple Test Page</h1>
+<hr/>
+<h2>One call payment</h2>
+<form action = "paysimple.test.php">
+    <input type="hidden" name = "action" value="onecall"/>
+    FirstName <input type="text" name="FirstName" value="custoemrfirstname" ></input><br/>
+    LastName <input type="text" name="LastName" value="custoemrlastname" ></input><br/>
+    Email <input type="text" name="Email" value="customeremail@mailinator.com"></input><br/>
+    Billing Address 1<input type="text" name="StreetAddress1" value="123 Second St"></input><br/>
+    Billing Address 2<input type="text" name="StreetAddress2" value=" apt 22"></input><br/>
+    City <input type="text" name="City" value="Denver"></input><br/>
+    State Code <input type="text" name="StateCode" value="CO"></input><br/>
+    Zip Code <input type="text" name="ZipCode" value="99887"></input><br/>
+    Country <input type="text" name="Country" value="USA"></input><br/>
+    Customer Account <input type="text" name="CustomerAccount" value="12343274635"></input><br/>
+    Credit Card Number <input type="text" name="CreditCardNumber" value="4111111111111111"></input><br/>
+    Exp Date <input type="text" name="ExpirationDate" value="12/2015"></input><br/>
+    Issuer <input type="text" name="Issuer" value="12"></input><br/>
+    Billing Zip Code<input type="text" name="BillingZipCode" value="80202"></input><br/>
+    Customer ID <input type="text" name="CustomerId" value="311712"></input><br/>
+    Phone <input type="text" name="Phone" value="8181234567"></input><br/>
+    Amount<input type="text" name="Amount" value="10"></input><br/>
+    <button>Pay</button>
+</form>
+<hr/>
+<h2>List Customers</h2>
+<form action = "paysimple.test.php">
+    <input type="hidden" name = "action" value="listCustomers"/>
+    
+    <button>List Customers</button>
+</form>
+<hr/>
+<h2>Create new customer</h2>
+<form action = paysimple.test.php>
+	Billing Address 1<input type="text" name="StreetAddress1" value="123 Second St"></input><br/>
+    Billing Address 2<input type="text" name="StreetAddress2" value=" apt 22"></input><br/>
+    City <input type="text" name="City" value="Denver"></input><br/>
+    State Code <input type="text" name="StateCode" value="CO"></input><br/>
+    Zip Code <input type="text" name="ZipCode" value="99887"></input><br/>
+    Country <input type="text" name="Country" value="USA"></input><br/>
+    ShippingSameAsBilling
+    <select name="ShippingSameAsBilling">
+         <option value=true>True</option>
+         <option value=false>False</option>
+    </select>
+    <br/>
+    ShippingAddress <input type="text" name="ShippingAddress"></input><br/>
+    Company <input type="text" name="Company"><input><br/>
+    Notes <input type="text" name="Notes" value=""TEST NOTES></input><br/>
+    Customer Account <input type="text" name="CustomerAccount" value="12343274635"></input><br/>
+    FirstName <input type="text" name="FirstName" value="custoemrfirstname" ></input><br/>
+    LastName <input type="text" name="LastName" value="custoemrlastname" ></input><br/>
+    Email <input type="text" name="Email" value="customeremail@mailinator.com"></input><br/>
+    Phone <input type="text" name="Phone" value="8181234567"></input><br/>
+    <input type="hidden" name="action" value="createCustomerObject"/>
+    <button>Create Customer Obj</button>
+</form>
+<hr/>
+<h2>Add new payment info</h2>
+<form action = "paysimple.test.php">
+    <input type="hidden" name="action" value="createPaymentAccountObject"/>
+    Credit Card Number <input type="text" name="CreditCardNumber" value="4111111111111111"></input><br/>
+    Exp Date <input type="text" name="ExpirationDate" value="12/2015"></input><br/>
+    Issuer <input type="text" name="Issuer" value="12"></input><br/>
+    Billing Zip Code<input type="text" name="BillingZipCode" value="80202"></input><br/>
+    Customer ID <input type="text" name="CustomerId" value="311712"></input><br/>
+    Is Default <input type="text" name="IsDefault" value="false"></input><br/>
+    Id <input type="text" name="Id" value="0"></input><br/>
+    <button>Create New Payment Method</button>
+</form>
+<br/>
+<h2>Post Payment</h2>
+<form action = "paysimple.test.php">
+    <input type="hidden" name="action" value="postPayment"/>
+    Account Id <input type="text" name="AccountId" value="502790"></input>( or 502783)<br/>
+    Amount <input type="text" name="Amount" value="10"></input><br/>
+
+    <button>Post Payment</button>
+</body>
+</html>
